@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|47fb76ef-25af-4033-a67d-16837c75fa33
+C:\Users\nikod\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|db5a2677-8e48-4824-8a5f-6370da5d63a8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0f11583e-395d-4671-a8bb-83181f6ffc5f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|42f3f9fd-420b-4cb6-80bc-e6e5d1b497a8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e488885c-c295-4d28-ae22-6b7552ea3af5
+C:\Users\nikod\Documents\PSoC Creator\Final\Domoticaconblink.cydsn\Domoticaconblink.cyprj|2d6f3029-38cc-466c-ae47-cecbed4de088
