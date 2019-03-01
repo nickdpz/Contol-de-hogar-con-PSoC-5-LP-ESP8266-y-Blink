@@ -50,57 +50,59 @@ char tweets[256];
 char dato[12];
 BLYNK_WRITE(V0) // V5 is the number of Virtual Pin  
 {
-  int pinValue = param.asInt();
-  sprintf(dato,"A%d",pinValue);
-  Serial.println(dato);
+  Serial.println("x");
 }
 BLYNK_WRITE(V1) // V5 is the number of Virtual Pin  
 {
-  int pinValue = param.asInt();
-  sprintf(dato,"C%d",pinValue);
-  Serial.println(dato);
+  Serial.println("c");
 }
 
 BLYNK_WRITE(V2) // V5 is the number of Virtual Pin  
 {
-  int pinValue = param.asInt();
-  sprintf(dato,"B%d",pinValue);
-  Serial.println(dato);
+  Serial.println("b");
 }
 
 BLYNK_WRITE(V3) // V5 is the number of Virtual Pin  
 {
-  int pinValue = param.asInt();
-  sprintf(dato,"D%d",pinValue);
-  Serial.println(dato);
+  Serial.println("d");
 }
 
 BLYNK_WRITE(V4) // V5 is the number of Virtual Pin  
 {
   int pinValue = param.asInt();
-  sprintf(dato,"S%d",pinValue);
-  Serial.println(dato);
+  
+  //sprintf(dato,"S%d",pinValue);
+  Serial.print("s");
+  Serial.println(pinValue,HEX);
 }
 
 BLYNK_WRITE(V5) // V5 is the number of Virtual Pin  
 {
   int pinValue = param.asInt();
-  sprintf(dato,"H%d",pinValue);
-  Serial.println(dato);
+  Serial.print("h");
+  Serial.println(pinValue,HEX);
 }
 
-BLYNK_WRITE(V6) // V5 is the number of Virtual Pin  
+BLYNK_WRITE(V6) // V5 is the number of Virtual Pin  Sala
 {
+ int hora, minuto;
   int pinValue = param.asInt();
-  sprintf(dato,"N%d",pinValue);
-  Serial.println(dato);
+  hora=char(pinValue/3600);
+  minuto=char((pinValue%3600)/60);
+  Serial.print("n");  
+  Serial.print(hora,HEX);//Envia parte alta
+  Serial.println(minuto,HEX);//Envia parte baja 
 }
 
 BLYNK_WRITE(V7) // V5 is the number of Virtual Pin  
 {
+  int hora, minuto;
   int pinValue = param.asInt();
-  sprintf(dato,"F%d",pinValue);
-  Serial.println(dato);
+  hora=char(pinValue/3600);
+  minuto=char((pinValue%3600)/60);
+  Serial.print("f");  
+  Serial.print(hora,HEX);//Envia parte alta
+  Serial.println(minuto,HEX);//Envia parte baja 
 }
 
 BLYNK_WRITE(V8) // V5 is the number of Virtual Pin  
@@ -146,6 +148,7 @@ void setup()
   // Debug console
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
+  //Serial.swap(); //pin rx tx
   //BLYNK_CONNECTED();
 }
 
