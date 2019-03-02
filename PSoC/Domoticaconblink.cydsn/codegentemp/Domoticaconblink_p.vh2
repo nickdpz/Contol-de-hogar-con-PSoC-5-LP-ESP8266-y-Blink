@@ -1,5 +1,5 @@
 -- Project:   Domoticaconblink
--- Generated: 02/28/2019 18:32:43
+-- Generated: 02/28/2019 20:59:30
 -- PSoC Creator  4.2
 
 ENTITY Domoticaconblink IS
@@ -77,9 +77,7 @@ ARCHITECTURE __DEFAULT__ OF Domoticaconblink IS
     SIGNAL \\\LCD:LCDPort(4)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
-    SIGNAL \PWM:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM:PWMUDB:cmp1_less\ : bit;
-    SIGNAL \PWM:PWMUDB:cmp2_eq\ : bit;
     SIGNAL \PWM:PWMUDB:cmp2_less\ : bit;
     SIGNAL \PWM:PWMUDB:control_0\ : bit;
     SIGNAL \PWM:PWMUDB:control_1\ : bit;
@@ -2059,10 +2057,8 @@ BEGIN
             clock => Net_90,
             cs_addr_2 => \PWM:PWMUDB:tc_i\,
             cs_addr_1 => \PWM:PWMUDB:runmode_enable\,
-            ce0_comb => \PWM:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM:PWMUDB:cmp1_less\,
             z0_comb => \PWM:PWMUDB:tc_i\,
-            ce1_comb => \PWM:PWMUDB:cmp2_eq\,
             cl1_comb => \PWM:PWMUDB:cmp2_less\,
             f1_blk_stat_comb => \PWM:PWMUDB:status_3\,
             busclk => ClockBlock_BUS_CLK);
@@ -2331,31 +2327,29 @@ BEGIN
 
     \PWM:PWMUDB:prevCompare1\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
+            eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \PWM:PWMUDB:prevCompare1\,
             clock_0 => Net_90,
-            main_0 => \PWM:PWMUDB:cmp1_eq\,
-            main_1 => \PWM:PWMUDB:cmp1_less\);
+            main_0 => \PWM:PWMUDB:cmp1_less\);
 
     \PWM:PWMUDB:prevCompare2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
+            eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \PWM:PWMUDB:prevCompare2\,
             clock_0 => Net_90,
-            main_0 => \PWM:PWMUDB:cmp2_eq\,
-            main_1 => \PWM:PWMUDB:cmp2_less\);
+            main_0 => \PWM:PWMUDB:cmp2_less\);
 
     \PWM:PWMUDB:status_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
+            eqn_main => "(!main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2363,12 +2357,11 @@ BEGIN
             q => \PWM:PWMUDB:status_0\,
             clock_0 => Net_90,
             main_0 => \PWM:PWMUDB:prevCompare1\,
-            main_1 => \PWM:PWMUDB:cmp1_eq\,
-            main_2 => \PWM:PWMUDB:cmp1_less\);
+            main_1 => \PWM:PWMUDB:cmp1_less\);
 
     \PWM:PWMUDB:status_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
+            eqn_main => "(!main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2376,12 +2369,11 @@ BEGIN
             q => \PWM:PWMUDB:status_1\,
             clock_0 => Net_90,
             main_0 => \PWM:PWMUDB:prevCompare2\,
-            main_1 => \PWM:PWMUDB:cmp2_eq\,
-            main_2 => \PWM:PWMUDB:cmp2_less\);
+            main_1 => \PWM:PWMUDB:cmp2_less\);
 
     Net_120:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
+            eqn_main => "(main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2389,12 +2381,11 @@ BEGIN
             q => Net_120,
             clock_0 => Net_90,
             main_0 => \PWM:PWMUDB:runmode_enable\,
-            main_1 => \PWM:PWMUDB:cmp1_eq\,
-            main_2 => \PWM:PWMUDB:cmp1_less\);
+            main_1 => \PWM:PWMUDB:cmp1_less\);
 
     Net_121:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
+            eqn_main => "(main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2402,7 +2393,6 @@ BEGIN
             q => Net_121,
             clock_0 => Net_90,
             main_0 => \PWM:PWMUDB:runmode_enable\,
-            main_1 => \PWM:PWMUDB:cmp2_eq\,
-            main_2 => \PWM:PWMUDB:cmp2_less\);
+            main_1 => \PWM:PWMUDB:cmp2_less\);
 
 END __DEFAULT__;

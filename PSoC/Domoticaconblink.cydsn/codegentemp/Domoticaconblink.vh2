@@ -2,7 +2,7 @@
 --	Conversion of Domoticaconblink.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Feb 28 18:32:40 2019
+--	Thu Feb 28 20:59:28 2019
 --
 
 USE cypress.cypress.all;
@@ -979,25 +979,15 @@ Net_6 <=  ('0') ;
 \PWM:PWMUDB:dith_count_0\\D\ <= ((not \PWM:PWMUDB:dith_count_0\ and \PWM:PWMUDB:tc_i\)
 	OR (not \PWM:PWMUDB:tc_i\ and \PWM:PWMUDB:dith_count_0\));
 
-\PWM:PWMUDB:cmp1_status\ <= ((not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_less\)
-	OR (not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_eq\));
+\PWM:PWMUDB:cmp1_status\ <= ((not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_less\));
 
-\PWM:PWMUDB:cmp2_status\ <= ((not \PWM:PWMUDB:prevCompare2\ and \PWM:PWMUDB:cmp2_less\)
-	OR (not \PWM:PWMUDB:prevCompare2\ and \PWM:PWMUDB:cmp2_eq\));
+\PWM:PWMUDB:cmp2_status\ <= ((not \PWM:PWMUDB:prevCompare2\ and \PWM:PWMUDB:cmp2_less\));
 
 \PWM:PWMUDB:status_2\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:tc_i\));
 
-\PWM:PWMUDB:pwm1_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_less\)
-	OR (\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_eq\));
+\PWM:PWMUDB:pwm1_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_less\));
 
-\PWM:PWMUDB:pwm2_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp2_less\)
-	OR (\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp2_eq\));
-
-\PWM:PWMUDB:cmp1\ <= (\PWM:PWMUDB:cmp1_less\
-	OR \PWM:PWMUDB:cmp1_eq\);
-
-\PWM:PWMUDB:cmp2\ <= (\PWM:PWMUDB:cmp2_less\
-	OR \PWM:PWMUDB:cmp2_eq\);
+\PWM:PWMUDB:pwm2_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp2_less\));
 
 \UART:IntClock\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
@@ -2425,11 +2415,11 @@ Net_4:cy_dff
 		clk=>\PWM:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM:PWMUDB:dith_count_0\);
 \PWM:PWMUDB:prevCompare1\:cy_dff
-	PORT MAP(d=>\PWM:PWMUDB:cmp1\,
+	PORT MAP(d=>\PWM:PWMUDB:cmp1_less\,
 		clk=>\PWM:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM:PWMUDB:prevCompare1\);
 \PWM:PWMUDB:prevCompare2\:cy_dff
-	PORT MAP(d=>\PWM:PWMUDB:cmp2\,
+	PORT MAP(d=>\PWM:PWMUDB:cmp2_less\,
 		clk=>\PWM:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM:PWMUDB:prevCompare2\);
 \PWM:PWMUDB:cmp1_status_reg\:cy_dsrff

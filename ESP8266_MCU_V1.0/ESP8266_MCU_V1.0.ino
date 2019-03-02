@@ -1,34 +1,4 @@
 /*************************************************************
-  Download latest Blynk library here:
-    https://github.com/blynkkk/blynk-library/releases/latest
-
-  Blynk is a platform with iOS and Android apps to control
-  Arduino, Raspberry Pi and the likes over the Internet.
-  You can easily build graphic interfaces for all your
-  projects by simply dragging and dropping widgets.
-
-    Downloads, docs, tutorials: http://www.blynk.cc
-    Sketch generator:           http://examples.blynk.cc
-    Blynk community:            http://community.blynk.cc
-    Follow us:                  http://www.fb.com/blynkapp
-                                http://twitter.com/blynk_app
-
-  Blynk library is licensed under MIT license
-  This example code is in public domain.
-
- *************************************************************
-  This example runs directly on ESP8266 chip.
-
-  Note: This requires ESP8266 support package:
-    https://github.com/esp8266/Arduino
-
-  Please be sure to select the right ESP8266 module
-  in the Tools -> Board menu!
-
-  Change WiFi ssid, pass, and Blynk auth token to run :)
-  Feel free to apply it to any other example. It's simple!
- *************************************************************/
-
 /* Comment this out to disable prints and save space */
 #define BLYNK_PRINT Serial
 
@@ -39,7 +9,8 @@
 #define BLYNK_MAX_SENDBYTES 256 //alargar el maxiomo del mensaje
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "cbde13b152d3432da53ad5585f9eb550";
+  char auth[] = "bc5aa1f8e8954a4992fbce283d802d15";//nicolas
+//char auth[] = "cbde13b152d3432da53ad5585f9eb550";//jefer
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
@@ -48,23 +19,23 @@ char pass[] = "26071967";
 int alert=0;
 char tweets[256];
 char dato[12];
-BLYNK_WRITE(V0) // V5 is the number of Virtual Pin  
+BLYNK_WRITE(V0) // V5 is the number of Virtual Pin  Boton 1
 {
-  Serial.println("x");
+  Serial.print("w");
 }
-BLYNK_WRITE(V1) // V5 is the number of Virtual Pin  
+BLYNK_WRITE(V1) // V5 is the number of Virtual Pin  Boton 2
 {
-  Serial.println("c");
+  Serial.print("x");
 }
 
 BLYNK_WRITE(V2) // V5 is the number of Virtual Pin  
 {
-  Serial.println("b");
+  Serial.print("y");
 }
 
 BLYNK_WRITE(V3) // V5 is the number of Virtual Pin  
 {
-  Serial.println("d");
+  Serial.print("z");
 }
 
 BLYNK_WRITE(V4) // V5 is the number of Virtual Pin  
@@ -73,14 +44,14 @@ BLYNK_WRITE(V4) // V5 is the number of Virtual Pin
   
   //sprintf(dato,"S%d",pinValue);
   Serial.print("s");
-  Serial.println(pinValue,HEX);
+  Serial.write(pinValue);
 }
 
 BLYNK_WRITE(V5) // V5 is the number of Virtual Pin  
 {
   int pinValue = param.asInt();
   Serial.print("h");
-  Serial.println(pinValue,HEX);
+  Serial.write(pinValue);
 }
 
 BLYNK_WRITE(V6) // V5 is the number of Virtual Pin  Sala
@@ -89,9 +60,9 @@ BLYNK_WRITE(V6) // V5 is the number of Virtual Pin  Sala
   int pinValue = param.asInt();
   hora=char(pinValue/3600);
   minuto=char((pinValue%3600)/60);
-  Serial.print("n");  
-  Serial.print(hora,HEX);//Envia parte alta
-  Serial.println(minuto,HEX);//Envia parte baja 
+  Serial.print("i");  
+  Serial.write(hora);//Envia parte alta
+  Serial.write(minuto);//Envia parte baja 
 }
 
 BLYNK_WRITE(V7) // V5 is the number of Virtual Pin  
@@ -101,15 +72,15 @@ BLYNK_WRITE(V7) // V5 is the number of Virtual Pin
   hora=char(pinValue/3600);
   minuto=char((pinValue%3600)/60);
   Serial.print("f");  
-  Serial.print(hora,HEX);//Envia parte alta
-  Serial.println(minuto,HEX);//Envia parte baja 
+  Serial.write(hora);//Envia parte alta
+  Serial.write(minuto);//Envia parte baja 
 }
 
 BLYNK_WRITE(V8) // V5 is the number of Virtual Pin  
 {
   int pinValue = param.asInt();
-  sprintf(dato,"M%d",pinValue);
-  Serial.println(dato);
+  Serial.print("m");
+  Serial.write(pinValue);
 }
 
 void BlYNK_CONECTED_PSOC(int Puerto,int Hora,int Minuto)
@@ -148,7 +119,7 @@ void setup()
   // Debug console
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
-  //Serial.swap(); //pin rx tx
+  Serial.print("*");
   //BLYNK_CONNECTED();
 }
 

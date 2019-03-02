@@ -5,12 +5,16 @@
 */
 #include "project.h"
 #include <stdio.h>
+#include <stdbool.h>
 
 #define DS1307_dir 0x68         
 #define ds1307_dir_memory 0x00
 #define direccion_de_registro_control 0x07
 #define registro_control 0b10010001
-
+volatile bool bandera = false;
+volatile bool banderaS =false;
+volatile bool banderaH = false;
+volatile char cont=0;
 
 typedef union
 {struct{
@@ -68,41 +72,65 @@ void DS_get_data(){
 CY_ISR(InterrupRx){
     char dato;
     dato=UART_GetChar();//recibe el dato del bluetooth
-    switch (dato){
-        case 'A':
-        {
-            PINA_Write(~PINA_Read());            
-            break;
-        }
-        case 'B':{ 
-            PINB_Write(~PINB_Read());
-            break;
-        }
-        case 'C':{
-            PINC_Write(~PINC_Read());            
-            break;
-        }
-        case 'D':{
-            PIND_Write(~PIND_Read());
-            break;
-        }
-        case 'S':
-        {
-            //PWM_WriteCompare2(255); 
-            break;
-        }
-        
-        case 'H':
-        {
-            break;
-        }        
-        default:
-        {
+    if(bandera==true){
+        switch (dato){
+            case 'w':{
+                PINA_Write(~PINA_Read());            
+                break;
+            }
+            case 'x':{ 
+                PINB_Write(~PINB_Read());
+                break;
+            }
+            case 'y':{
+                PINC_Write(~PINC_Read());            
+                break;
+            }
+            case 'z':{
+                PIND_Write(~PIND_Read());
+                break;
+            }
+            case 's':{
+                LCD_Position(0,0);
+                LCD_PrintString("S    ");
+                banderaS=true; 
+                break;
+            }
+            case 'h':{   
+                LCD_Position(0,0);
+                LCD_PrintString("H     ");
+                banderaH=true; 
+                break;
+            }
+            case 'i':{
+                LCD_Position(0,0);
             
-            
-            
-            break;
-        }
+            }
+            default:
+            {
+                if (banderaS==true){
+                    char dimmer=((255*dato)/100);
+                    LCD_Position(0,2);
+                    LCD_PrintNumber(dato);
+                    PWM_WriteCompare2(dimmer);
+                    banderaS=false;
+                }
+                if (banderaH==true){
+                    char dimmer=((255*dato)/100);
+                    LCD_Position(0,2);
+                    LCD_PrintNumber(dato);
+                    PWM_WriteCompare1(dimmer);
+                    banderaH=false;
+                }
+                break;
+            }
+    }
+    }else{
+        if(dato=='*'){
+            LCD_Position(0,0);
+            LCD_PrintString("Conect");
+            bandera=true;
+        }    
     }
 }
 
