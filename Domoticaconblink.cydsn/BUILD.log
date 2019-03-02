@@ -1,0 +1,5 @@
+--------------- Build Started: 02/28/2019 20:40:34 Project: Domoticaconblink, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\nikod\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\nikod\Documents\PSoC Creator\Final\Domoticaconblink.cydsn\Domoticaconblink.cyprj" -d CY8C5888LTI-LP097 -s "C:\Users\nikod\Documents\PSoC Creator\Final\Domoticaconblink.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Error: fit.M0040: Domoticaconblink.cyprj: The fitter could not open the project specified on the command line: (Unable to load project: C:\Users\nikod\Documents\PSoC Creator\Final\Domoticaconblink.cydsn\Domoticaconblink.cyprj). (File=C:\Users\nikod\Documents\PSoC Creator\Final\Domoticaconblink.cydsn\Domoticaconblink.cyprj)
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Build Failed: 02/28/2019 20:40:35 ---------------
