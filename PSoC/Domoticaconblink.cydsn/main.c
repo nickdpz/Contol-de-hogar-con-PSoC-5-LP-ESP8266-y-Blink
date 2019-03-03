@@ -354,7 +354,7 @@ CY_ISR(InterrupRx){
                                     item2[2]=false;
                                 }
                                 else{
-                                    item2[0]=true;
+                                    item2[2]=true;
                                 }
                                 break;
                             }
@@ -446,44 +446,44 @@ void muestreo(){
 
 void comparacion(){
     if(item1[0]||item1[1]){
-        LCD_Position(0,0);
-        LCD_PrintString("Puede imprimir");
-        if((wHoraInicio[2]==((ds.hour)&(0b00111111)))&(wHoraInicio[1]==ds.min)){
+//        LCD_Position(0,0);
+//        LCD_PrintString("Puede imprimir");
+        if((wHoraInicio[2]==((ds.hour)&(0b00111111)))&(wHoraInicio[1]==ds.min)&(ds.sec==0x0)){
             PINA_Write(1);
         }
     }
     if(item1[2]||item1[3]){
-        if((wHoraFin[2]==((ds.hour)&(0b00111111)))&(wHoraFin[1]==ds.min)){
-        PINA_Write(0);
+        if((wHoraFin[2]==((ds.hour)&(0b00111111)))&(wHoraFin[1]==ds.min)&(ds.sec==0x0)){
+            PINA_Write(0);
         }
     }
     if(item2[0]||item2[1]){
-        if((xHoraInicio[2]==((ds.hour)&(0b00111111)))&(xHoraInicio[1]==ds.min)){
-        PINB_Write(1);
+        if((xHoraInicio[2]==((ds.hour)&(0b00111111)))&(xHoraInicio[1]==ds.min)&(ds.sec==0x0)){
+            PINB_Write(1);
         }
     }
     if(item2[2]||item2[3]){
-        if((xHoraFin[2]==((ds.hour)&(0b00111111)))&(xHoraFin[1]==ds.min)){
-        PINB_Write(0);
+        if((xHoraFin[2]==((ds.hour)&(0b00111111)))&(xHoraFin[1]==ds.min)&(ds.sec==0x0)){
+            PINB_Write(0);
         }
     }
     if(item3[0]||item3[1]){
-        if((yHoraInicio[2]==((ds.hour)&(0b00111111)))&(yHoraInicio[1]==ds.min)){
-        PINC_Write(1);
+        if((yHoraInicio[2]==((ds.hour)&(0b00111111)))&(yHoraInicio[1]==ds.min)&(ds.sec==0x0)){
+            PINC_Write(1);
         }
     }
     if(item3[2]||item3[3]){
-        if((yHoraFin[2]==((ds.hour)&(0b00111111)))&(yHoraFin[1]==ds.min)){
+        if((yHoraFin[2]==((ds.hour)&(0b00111111)))&(yHoraFin[1]==ds.min)&(ds.sec==0x0)){
         PINC_Write(0);
         }
     }
     if(item4[0]||item4[1]){
-        if((zHoraInicio[2]==((ds.hour)&(0b00111111)))&(zHoraInicio[1]==ds.min)){
+        if((zHoraInicio[2]==((ds.hour)&(0b00111111)))&(zHoraInicio[1]==ds.min)&(ds.sec==0x0)){
         PIND_Write(1);
         }
     }
     if(item4[2]||item4[3]){        
-        if((zHoraFin[2]==((ds.hour)&(0b00111111)))&(zHoraFin[1]==ds.min)){
+        if((zHoraFin[2]==((ds.hour)&(0b00111111)))&(zHoraFin[1]==ds.min)&(ds.sec==0x0)){
         PIND_Write(0);
         }
     }
@@ -512,14 +512,14 @@ int main(void)
     ADC_Start();
     /*
     ds.sec =  0x00; //  
-    ds.min =  0x14;//
-    ds.hour = 0b01010010;//Formato 24 horas bit 6 en 1 - 16 horas
-    ds.date = 0x02; // dia 2
+    ds.min =  0x22;//
+    ds.hour = 0b00010011;//Formato 24 horas bit 6 en 0 - 16 horas
+    ds.date = 0x03; // dia 2
     ds.month = 0x03;//marzo
     ds.year = 0x19; // 2019
-    ds.weekDay = 6; // Saturday: 5th day of week considering monday as first day.;
+    ds.weekDay = 6; // Sunday: 6th day of week considering monday as first day.;
     DS_init();//Configura 
-    DS_set_data();  */
+    DS_set_data();*/ 
     PINA_Write(0);
     PINB_Write(0);
     PINC_Write(0);
