@@ -40,6 +40,7 @@ rtc_t wHoraInicio;
 
 rtc_t wHoraFin;
 
+uint16 aux[2]={0,0};
 
 void DS_begintx (void){
         do{
@@ -197,13 +198,9 @@ CY_ISR(InterrupRx){
     }
 }
 
-
-void enviarhora(){
-
-
-}
-
 void reloj(){
+        DS_get_data();     
+        LCD_Position(1,4);
         LCD_PrintNumber(0x01&(ds.hour>>4));
         LCD_PrintNumber((0b00001111)&ds.hour);
         LCD_PutChar(':');
@@ -214,14 +211,56 @@ void reloj(){
         LCD_PrintNumber((0b00001111)&ds.sec);
 }
 
+void muestreo(){
+    //Temperatura
+    uint16 temp=0;
+    char warning[3]={};
+    aux[0]=aux[1];//Actualiza dato pasado
+    ADC_StartConvert();
+    ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+    temp=ADC_GetResult16();
+    aux[1]=ADC_CountsTo_mVolts(temp);
+    if((2500>aux[0])&&(aux[1]>=2500)){//Nueva medida es mayor a 2500 y la anterior era menor 2500 ->50°
+        temp=EEPROM_ReadByte(0);
+        temp++;//Aumenta el numero de alertas
+        EEPROM_WriteByte(temp,0);
+        LCD_Position(0,0);
+        LCD_PrintString("Warning T #");
+        LCD_PrintNumber(temp);
+        sprintf(warning,"t%d",temp);
+        UART_PutString(warning);        
+    }
+    
+}
+
+
+CY_ISR(InterrupISR){
+        
+        PINA_Write(1);
+//        char temp=0;
+//        char warning[3]={};
+//        temp=EEPROM_ReadByte(0);
+//        temp++;//Aumenta el numero de alertas
+//        EEPROM_WriteByte(temp,0);
+//        LCD_Position(0,0);
+//        LCD_PrintString("Warning M #");
+//        LCD_PrintNumber(temp);
+//        sprintf(warning,"m%d",temp);
+//        UART_PutString(warning); 
+        PINMOV_ClearInterrupt();
+}
+
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     IRQRX_StartEx(InterrupRx);
+    ISR_MOV_StartEx(InterrupISR);
     UART_Start();
     LCD_Start();
     I2C_Start();
     PWM_Start();
+    ADC_Start();
+    /*
     ds.sec =  0x00; //  
     ds.min =  0x37;//
     ds.hour = 0b000010110;//Formato 24 horas bit 6 en 1 - 16 horas
@@ -229,18 +268,22 @@ int main(void)
     ds.month = 0x03;//marzo
     ds.year = 0x19; // 2019
     ds.weekDay = 6; // Saturday: 5th day of week considering monday as first day.;
-    //DS_init();//Configura 
-    //DS_set_data();  
+    DS_init();//Configura 
+    DS_set_data();  */
     PINA_Write(0);
     PINB_Write(0);
     PINC_Write(0);
     PIND_Write(0);
+    PWM_WriteCompare1(0);
     PWM_WriteCompare2(0); 
+    EEPROM_Start();
+    //EEPROM_WriteByte(0,0);
+    
     for(;;)
     {       
-        DS_get_data();     
-        LCD_Position(1,4);
         reloj();
+        muestreo();
         CyDelay(500);
+                
     }
 }

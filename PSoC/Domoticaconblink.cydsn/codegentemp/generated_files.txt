@@ -65,11 +65,29 @@
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PIND_aliases.h" value="HEADER;;;;;PIND" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PIND.c" value="SOURCE_C;CortexM3;;;;PIND" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PIND.h" value="HEADER;;;;;PIND" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\EEPROM.c" value="SOURCE_C;CortexM3;;;;EEPROM" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\EEPROM.h" value="HEADER;;;;;EEPROM" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC.c" value="SOURCE_C;CortexM3;;;;ADC" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC.h" value="HEADER;;;;;ADC" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_INT.c" value="SOURCE_C;CortexM3;;;;ADC" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_PM.c" value="SOURCE_C;CortexM3;;;;ADC" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PTEMP_aliases.h" value="HEADER;;;;;PTEMP" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PTEMP.c" value="SOURCE_C;CortexM3;;;;PTEMP" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PTEMP.h" value="HEADER;;;;;PTEMP" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PINMOV_aliases.h" value="HEADER;;;;;PINMOV" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PINMOV.c" value="SOURCE_C;CortexM3;;;;PINMOV" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\PINMOV.h" value="HEADER;;;;;PINMOV" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ISR_MOV.c" value="SOURCE_C;CortexM3;;;;ISR_MOV" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ISR_MOV.h" value="HEADER;;;;;ISR_MOV" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\UART_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_IntClock" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\UART_IntClock.h" value="HEADER;;;;;UART_IntClock" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\LCD_LCDPort_aliases.h" value="HEADER;;;;;LCD_LCDPort" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\LCD_LCDPort.c" value="SOURCE_C;CortexM3;;;;LCD_LCDPort" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\LCD_LCDPort.h" value="HEADER;;;;;LCD_LCDPort" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_IRQ" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_IRQ.h" value="HEADER;;;;;ADC_IRQ" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_theACLK" />
+  <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\ADC_theACLK.h" value="HEADER;;;;;ADC_theACLK" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\nikod\Documents\PSoC Creator\Final\PSoC\Domoticaconblink.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
