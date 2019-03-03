@@ -90,30 +90,6 @@ void BlYNK_CONECTED_PSOC(int Puerto,int Hora,int Minuto)
 }
 
 
-
-BLYNK_CONNECTED() {
-  //seconds from the start of a day. 0 - min, 86399 - max
-  int startAt = 5 * 60; //00:05
-
-  //seconds from the start of a day. 0 - min, 86399 - max
-  int stopAt = (60 + 5) * 60; //01:05
-
-  //timezone
-  //full list of supported timezones could be found here
-  //https://www.mkyong.com/java/java-display-list-of-timezone-with-gmt/
-  char tz[] = "America/Bogota";
-
-  Blynk.virtualWrite(V6, startAt, stopAt, tz);
-
-  //you may also pass day
-  //char days[] = "1"; //Monday
-  //Blynk.virtualWrite(V1, startAt, stopAt, tz, days);
-
-  //or days
-  //char days[] = "1,2,3"; //Monday, Tuesday, Wednesday
-  //Blynk.virtualWrite(V1, startAt, stopAt, tz, days);
-}
-
 void setup()
 {
   // Debug console
@@ -131,10 +107,17 @@ void loop()
     char in_serial=Serial.read();
     if (in_serial=='t')
     {
-      sprintf(tweets,"alerta N%d.temperatura",alert);
+      alert=Serial.read();
+      sprintf(tweets,"Alerta N%d de Temperatura",alert);
       Blynk.tweet(tweets);
-      alert=1+alert;
     }
+    if(in_serial=='m'){
+      
+            alert=Serial.read();
+            sprintf(tweets,"Alerta N %d de Movimiento",alert);
+            Blynk.tweet(tweets);
+      
+      }
     
   }
   
