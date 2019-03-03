@@ -30,28 +30,28 @@ volatile char item=0;
 
 typedef union
 {struct{
-  uint8_t sec;
-  uint8_t min;
-  uint8_t hour;
-  uint8_t weekDay;
-  uint8_t date;
-  uint8_t month;
-  uint8_t year;  
+  char sec;
+  char min;
+  char hour;
+  char weekDay;
+  char date;
+  char month;
+  char year;  
 };
-uint8_t datos[8];
+char datos[8];
 }rtc_t;
 
 rtc_t ds;
 
-volatile rtc_t wHoraInicio;
-volatile rtc_t xHoraInicio;
-volatile rtc_t yHoraInicio;
-volatile rtc_t zHoraInicio;
+volatile char wHoraInicio[3];
+volatile char xHoraInicio[3];
+volatile char yHoraInicio[3];
+volatile char zHoraInicio[3];
 
-volatile rtc_t wHoraFin;
-volatile rtc_t xHoraFin;
-volatile rtc_t yHoraFin;
-volatile rtc_t zHoraFin;
+volatile char wHoraFin[3];
+volatile char xHoraFin[3];
+volatile char yHoraFin[3];
+volatile char zHoraFin[3];
 
 uint16 aux[2]={0,0};
 
@@ -173,42 +173,42 @@ CY_ISR(InterrupRx){
                         a=((dato/10)<<4)+dato%10;
                         switch(item){
                             case 1:{
-                                wHoraInicio.min=a;
+                                wHoraInicio[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item1[3]=false;
+                                    item1[1]=false;
                                 }
                                 else{
-                                    item1[3]=true;
+                                    item1[1]=true;
                                 }
                                 break;
                             }
                             case 2:{
-                                xHoraInicio.min=a;
+                                xHoraInicio[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item2[3]=false;
+                                    item2[1]=false;
                                 }
                                 else{
-                                    item2[3]=true;
+                                    item2[1]=true;
                                 }
                                 break;
                             }
                             case 3:{
-                                yHoraInicio.min=a;
+                                yHoraInicio[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item3[3]=false;
+                                    item3[1]=false;
                                 }
                                 else{
-                                    item3[3]=true;
+                                    item3[1]=true;
                                 }                               
                                 break;
                             }
                             case 4:{
-                                zHoraInicio.min=a;
+                                zHoraInicio[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item4[3]=false;
+                                    item4[1]=false;
                                 }
                                 else{
-                                    item4[3]=true;
+                                    item4[1]=true;
                                 }                                
                                 break;
                             }
@@ -226,42 +226,42 @@ CY_ISR(InterrupRx){
                         a=((dato/10)<<4)+dato%10;
                         switch(item){
                             case 1:{
-                                wHoraInicio.hour=a;
+                                wHoraInicio[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item1[2]=false;
+                                    item1[0]=false;
                                 }
                                 else{
-                                    item1[2]=true;
+                                    item1[0]=true;
                                 }                                
                                 break;
                             }
                             case 2:{
-                                xHoraInicio.hour=a;
+                                xHoraInicio[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item2[2]=false;
+                                    item2[0]=false;
                                 }
                                 else{
-                                    item2[2]=true;
+                                    item2[0]=true;
                                 }  
                                 break;
                             }
                             case 3:{
-                                yHoraInicio.hour=a;
+                                yHoraInicio[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item3[2]=false;
+                                    item3[0]=false;
                                 }
                                 else{
-                                    item3[2]=true;
+                                    item3[0]=true;
                                 }  
                                 break;
                             }
                             case 4:{
-                                zHoraInicio.hour=a;
+                                zHoraInicio[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item4[2]=false;
+                                    item4[0]=false;
                                 }
                                 else{
-                                    item4[2]=true;
+                                    item4[0]=true;
                                 }                                  
                                 break;
                             }
@@ -287,17 +287,17 @@ CY_ISR(InterrupRx){
                         a=((dato/10)<<4)+dato%10;
                         switch(item){
                             case 1:{
-                                wHoraFin.min=a;
+                                wHoraFin[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item1[1]=false;
+                                    item1[3]=false;
                                 }
                                 else{
-                                    item1[1]=true;
+                                    item1[3]=true;
                                 }
                                 break;
                             }
                             case 2:{
-                                xHoraFin.min=a;
+                                xHoraFin[1]=a;
                                 if(dato==0){//Condicion de reset
                                     item2[1]=false;
                                 }
@@ -307,22 +307,22 @@ CY_ISR(InterrupRx){
                                 break;
                             }
                             case 3:{
-                                yHoraFin.min=a;
+                                yHoraFin[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item3[1]=false;
+                                    item3[3]=false;
                                 }
                                 else{
-                                    item3[1]=true;
+                                    item3[3]=true;
                                 }
                                 break;
                             }
                             case 4:{
-                                zHoraFin.min=a;
+                                zHoraFin[1]=a;
                                 if(dato==0){//Condicion de reset
-                                    item4[1]=false;
+                                    item4[3]=false;
                                 }
                                 else{
-                                    item4[1]=true;
+                                    item4[3]=true;
                                 }                                
                                 break;                               
                             }
@@ -339,19 +339,19 @@ CY_ISR(InterrupRx){
                         a=((dato/10)<<4)+dato%10;
                         switch(item){
                             case 1:{
-                                wHoraFin.hour=a;
+                                wHoraFin[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item1[0]=false;
+                                    item1[2]=false;
                                 }
                                 else{
-                                    item1[0]=true;
+                                    item1[2]=true;
                                 }
                                 break;
                             }
                             case 2:{
-                                xHoraFin.hour=a;
+                                xHoraFin[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item2[0]=false;
+                                    item2[2]=false;
                                 }
                                 else{
                                     item2[0]=true;
@@ -359,22 +359,22 @@ CY_ISR(InterrupRx){
                                 break;
                             }
                             case 3:{
-                                yHoraFin.hour=a;
+                                yHoraFin[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item3[0]=false;
+                                    item3[2]=false;
                                 }
                                 else{
-                                    item3[0]=true;
+                                    item3[2]=true;
                                 }
                                 break;
                             }
                             case 4:{
-                                zHoraFin.hour=a;
+                                zHoraFin[2]=a;
                                 if(dato==0){//Condicion de reset
-                                    item4[0]=false;
+                                    item4[2]=false;
                                 }
                                 else{
-                                    item4[0]=true;
+                                    item4[2]=true;
                                 }
                                 break;
                                
@@ -404,7 +404,7 @@ CY_ISR(InterrupRx){
 }
 
 void reloj(){
-        DS_get_data();     
+  
         LCD_Position(1,4);
         LCD_PrintNumber(0x03&(ds.hour>>4));
         LCD_PrintNumber((0b00001111)&ds.hour);
@@ -446,43 +446,45 @@ void muestreo(){
 
 void comparacion(){
     if(item1[0]||item1[1]){
-        if((wHoraFin.hour==ds.hour)&&(wHoraFin.min==ds.min)){
-        PINA_Write(0);
+        LCD_Position(0,0);
+        LCD_PrintString("Puede imprimir");
+        if((wHoraInicio[2]==((ds.hour)&(0b00111111)))&(wHoraInicio[1]==ds.min)){
+            PINA_Write(1);
         }
     }
     if(item1[2]||item1[3]){
-        if((wHoraInicio.hour==ds.hour)&&(wHoraInicio.min==ds.min)){
-        PINA_Write(1);
+        if((wHoraFin[2]==((ds.hour)&(0b00111111)))&(wHoraFin[1]==ds.min)){
+        PINA_Write(0);
         }
     }
     if(item2[0]||item2[1]){
-        if((xHoraFin.hour==ds.hour)&&(xHoraFin.min==ds.min)){
-        PINB_Write(0);
-        }
-    }
-    if(item2[2]||item2[3]){
-        if((yHoraInicio.hour==ds.hour)&&(wHoraInicio.min==ds.min)){
+        if((xHoraInicio[2]==((ds.hour)&(0b00111111)))&(xHoraInicio[1]==ds.min)){
         PINB_Write(1);
         }
     }
-    if(item3[0]||item3[1]){
-        if((yHoraFin.hour==ds.hour)&&(yHoraFin.min==ds.min)){
-        PINC_Write(0);
+    if(item2[2]||item2[3]){
+        if((xHoraFin[2]==((ds.hour)&(0b00111111)))&(xHoraFin[1]==ds.min)){
+        PINB_Write(0);
         }
     }
-    if(item3[2]||item3[3]){
-        if((yHoraInicio.hour==ds.hour)&&(yHoraInicio.min==ds.min)){
+    if(item3[0]||item3[1]){
+        if((yHoraInicio[2]==((ds.hour)&(0b00111111)))&(yHoraInicio[1]==ds.min)){
         PINC_Write(1);
         }
     }
+    if(item3[2]||item3[3]){
+        if((yHoraFin[2]==((ds.hour)&(0b00111111)))&(yHoraFin[1]==ds.min)){
+        PINC_Write(0);
+        }
+    }
     if(item4[0]||item4[1]){
-        if((zHoraFin.hour==ds.hour)&&(zHoraFin.min==ds.min)){
-        PIND_Write(0);
+        if((zHoraInicio[2]==((ds.hour)&(0b00111111)))&(zHoraInicio[1]==ds.min)){
+        PIND_Write(1);
         }
     }
     if(item4[2]||item4[3]){        
-        if((zHoraInicio.hour==ds.hour)&&(zHoraInicio.min==ds.min)){
-        PIND_Write(1);
+        if((zHoraFin[2]==((ds.hour)&(0b00111111)))&(zHoraFin[1]==ds.min)){
+        PIND_Write(0);
         }
     }
 
@@ -510,8 +512,8 @@ int main(void)
     ADC_Start();
     /*
     ds.sec =  0x00; //  
-    ds.min =  0x00;//
-    ds.hour = 0b01100011;//Formato 24 horas bit 6 en 1 - 16 horas
+    ds.min =  0x14;//
+    ds.hour = 0b01010010;//Formato 24 horas bit 6 en 1 - 16 horas
     ds.date = 0x02; // dia 2
     ds.month = 0x03;//marzo
     ds.year = 0x19; // 2019
@@ -530,6 +532,7 @@ int main(void)
     for(;;)
     {       
         reloj();
+        DS_get_data();   
         comparacion();
         muestreo();
         CyDelay(500);
