@@ -798,7 +798,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x23c4
+.text           0x00000000     0x2424
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -819,462 +819,462 @@ END GROUP
                 0x00000084      0x244 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000084                InterrupRx
  .text.InterrupISR
-                0x000002c8       0x10 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000002c8       0x50 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x000002c8                InterrupISR
  .text.DS_begintx
-                0x000002d8       0x10 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x000002d8                DS_begintx
+                0x00000318       0x10 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000318                DS_begintx
  .text.DS_get_data
-                0x000002e8       0x34 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x000002e8                DS_get_data
- .text.reloj    0x0000031c       0x5c .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x0000031c                reloj
+                0x00000328       0x34 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000328                DS_get_data
+ .text.reloj    0x0000035c       0x5c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x0000035c                reloj
  .text.muestreo
-                0x00000378       0x80 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000378                muestreo
- .text.main     0x000003f8       0x68 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x000003f8                main
+                0x000003b8       0xa8 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000003b8                muestreo
+ .text.main     0x00000460       0x70 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000460                main
  .text.CyClockStartupError
-                0x00000460        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000004d0        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cfg_write_bytes32
-                0x00000464       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000004d4       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x00000498        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000508        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x000004a4       0x7c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000514       0x7c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYCONFIGCPY
-                0x00000520        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000590        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.ClockSetup
-                0x00000528       0xf8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000598       0xf8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cyfitter_cfg
-                0x00000620      0x114 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                0x00000620                cyfitter_cfg
+                0x00000690      0x100 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000690                cyfitter_cfg
  .text.IntDefaultHandler
-                0x00000734       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000734                IntDefaultHandler
- .text._sbrk    0x00000744       0x30 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000744                _sbrk
- .text.Start_c  0x00000774       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000774                Start_c
+                0x00000790       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000790                IntDefaultHandler
+ .text._sbrk    0x000007a0       0x30 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000007a0                _sbrk
+ .text.Start_c  0x000007d0       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000007d0                Start_c
  .text.initialize_psoc
-                0x000007c0       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000007c0                initialize_psoc
+                0x0000081c       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x0000081c                initialize_psoc
  .text.UART_Init
-                0x00000828       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x00000828                UART_Init
+                0x00000884       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x00000884                UART_Init
  .text.UART_Enable
-                0x00000850       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x00000850                UART_Enable
+                0x000008ac       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x000008ac                UART_Enable
  .text.UART_Start
-                0x00000888       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x00000888                UART_Start
+                0x000008e4       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x000008e4                UART_Start
  .text.UART_GetChar
-                0x000008a4       0x2c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x000008a4                UART_GetChar
+                0x00000900       0x2c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x00000900                UART_GetChar
  .text.UART_PutChar
-                0x000008d0       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x000008d0                UART_PutChar
+                0x0000092c       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x0000092c                UART_PutChar
  .text.UART_PutString
-                0x000008e8       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x000008e8                UART_PutString
+                0x00000944       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x00000944                UART_PutString
  .text.LCD_WrCntrlNib
-                0x0000090c       0x34 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000968       0x34 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
  .text.LCD_WrDatNib
-                0x00000940       0x44 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x0000099c       0x44 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
  .text.LCD_IsReady
-                0x00000984       0xe4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000984                LCD_IsReady
+                0x000009e0       0xe4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x000009e0                LCD_IsReady
  .text.LCD_WriteData
-                0x00000a68       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000a68                LCD_WriteData
+                0x00000ac4       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000ac4                LCD_WriteData
  .text.LCD_PrintString
-                0x00000a80       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000a80                LCD_PrintString
+                0x00000adc       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000adc                LCD_PrintString
  .text.LCD_PutChar
-                0x00000a9c        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000a9c                LCD_PutChar
+                0x00000af8        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000af8                LCD_PutChar
  .text.LCD_WriteControl
-                0x00000aa4       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000aa4                LCD_WriteControl
+                0x00000b00       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000b00                LCD_WriteControl
  .text.LCD_Init
-                0x00000abc       0x6c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000abc                LCD_Init
+                0x00000b18       0x6c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000b18                LCD_Init
  .text.LCD_Enable
-                0x00000b28       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000b28                LCD_Enable
+                0x00000b84       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000b84                LCD_Enable
  .text.LCD_Start
-                0x00000b3c       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000b3c                LCD_Start
+                0x00000b98       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000b98                LCD_Start
  .text.LCD_Position
-                0x00000b58       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000b58                LCD_Position
+                0x00000bb4       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000bb4                LCD_Position
  .text.LCD_PrintU32Number
-                0x00000b94       0x64 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x00000b94                LCD_PrintU32Number
+                0x00000bf0       0x64 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x00000bf0                LCD_PrintU32Number
  .text.IRQRX_SetVector
-                0x00000bf8        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
-                0x00000bf8                IRQRX_SetVector
+                0x00000c54        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+                0x00000c54                IRQRX_SetVector
  .text.IRQRX_SetPriority
-                0x00000c04       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
-                0x00000c04                IRQRX_SetPriority
+                0x00000c60       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+                0x00000c60                IRQRX_SetPriority
  .text.IRQRX_Enable
-                0x00000c14        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
-                0x00000c14                IRQRX_Enable
+                0x00000c70        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+                0x00000c70                IRQRX_Enable
  .text.IRQRX_Disable
-                0x00000c20        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
-                0x00000c20                IRQRX_Disable
+                0x00000c7c        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+                0x00000c7c                IRQRX_Disable
  .text.IRQRX_StartEx
-                0x00000c2c       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
-                0x00000c2c                IRQRX_StartEx
+                0x00000c88       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+                0x00000c88                IRQRX_StartEx
  .text.I2C_Init
-                0x00000c48       0x68 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
-                0x00000c48                I2C_Init
+                0x00000ca4       0x68 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+                0x00000ca4                I2C_Init
  .text.I2C_Enable
-                0x00000cb0       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
-                0x00000cb0                I2C_Enable
+                0x00000d0c       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+                0x00000d0c                I2C_Enable
  .text.I2C_Start
-                0x00000cd4       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
-                0x00000cd4                I2C_Start
- .text.I2C_ISR  0x00000cfc      0x2d0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
-                0x00000cfc                I2C_ISR
+                0x00000d30       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+                0x00000d30                I2C_Start
+ .text.I2C_ISR  0x00000d58      0x2d0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
+                0x00000d58                I2C_ISR
  .text.I2C_MasterSendStart
-                0x00000fcc       0x80 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x00000fcc                I2C_MasterSendStart
+                0x00001028       0x80 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x00001028                I2C_MasterSendStart
  .text.I2C_MasterSendRestart
-                0x0000104c       0x6c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x0000104c                I2C_MasterSendRestart
+                0x000010a8       0x6c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x000010a8                I2C_MasterSendRestart
  .text.I2C_MasterSendStop
-                0x000010b8       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x000010b8                I2C_MasterSendStop
+                0x00001114       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x00001114                I2C_MasterSendStop
  .text.I2C_MasterWriteByte
-                0x000010f0       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x000010f0                I2C_MasterWriteByte
+                0x0000114c       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x0000114c                I2C_MasterWriteByte
  .text.I2C_MasterReadByte
-                0x00001148       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x00001148                I2C_MasterReadByte
+                0x000011a4       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x000011a4                I2C_MasterReadByte
  .text.UART_IntClock_Start
-                0x000011a0       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
-                0x000011a0                UART_IntClock_Start
- .text.CyHalt   0x000011bc        0x4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
-                0x000011bc                CyHalt
- .text.CyDelay  0x000011c0       0x2c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
-                0x000011c0                CyDelay
+                0x000011fc       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
+                0x000011fc                UART_IntClock_Start
+ .text.CyHalt   0x00001218        0x4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+                0x00001218                CyHalt
+ .text.CyDelay  0x0000121c       0x2c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+                0x0000121c                CyDelay
  .text.CyDelayUs
-                0x000011ec       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
-                0x000011ec                CyDelayUs
+                0x00001248       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+                0x00001248                CyDelayUs
  .text.CyIntSetVector
-                0x00001200       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
-                0x00001200                CyIntSetVector
+                0x0000125c       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+                0x0000125c                CyIntSetVector
  .text.CyIntSetPriority
-                0x00001228       0x30 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
-                0x00001228                CyIntSetPriority
+                0x00001284       0x30 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+                0x00001284                CyIntSetPriority
  .text.PWM_Enable
-                0x00001258       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001258                PWM_Enable
+                0x000012b4       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012b4                PWM_Enable
  .text.PWM_WriteCounter
-                0x00001268        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001268                PWM_WriteCounter
+                0x000012c4        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012c4                PWM_WriteCounter
  .text.PWM_WritePeriod
-                0x00001274        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001274                PWM_WritePeriod
+                0x000012d0        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012d0                PWM_WritePeriod
  .text.PWM_WriteCompare1
-                0x00001280        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001280                PWM_WriteCompare1
+                0x000012dc        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012dc                PWM_WriteCompare1
  .text.PWM_WriteCompare2
-                0x0000128c        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x0000128c                PWM_WriteCompare2
+                0x000012e8        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012e8                PWM_WriteCompare2
  .text.PWM_SetInterruptMode
-                0x00001298        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001298                PWM_SetInterruptMode
+                0x000012f4        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x000012f4                PWM_SetInterruptMode
  .text.PWM_ReadStatusRegister
-                0x000012a4        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x000012a4                PWM_ReadStatusRegister
+                0x00001300        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x00001300                PWM_ReadStatusRegister
  .text.PWM_ReadCapture
-                0x000012b0        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x000012b0                PWM_ReadCapture
+                0x0000130c        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x0000130c                PWM_ReadCapture
  .text.PWM_ClearFIFO
-                0x000012bc       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x000012bc                PWM_ClearFIFO
+                0x00001318       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x00001318                PWM_ClearFIFO
  .text.PWM_Init
-                0x000012d0       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x000012d0                PWM_Init
+                0x0000132c       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x0000132c                PWM_Init
  .text.PWM_Start
-                0x00001328       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x00001328                PWM_Start
+                0x00001384       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x00001384                PWM_Start
  .text.PINA_Write
-                0x00001344       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
-                0x00001344                PINA_Write
+                0x000013a0       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+                0x000013a0                PINA_Write
  .text.PINA_Read
-                0x0000135c       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
-                0x0000135c                PINA_Read
+                0x000013b8       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+                0x000013b8                PINA_Read
  .text.PINB_Write
-                0x0000136c       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
-                0x0000136c                PINB_Write
+                0x000013c8       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+                0x000013c8                PINB_Write
  .text.PINB_Read
-                0x00001384       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
-                0x00001384                PINB_Read
+                0x000013e0       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+                0x000013e0                PINB_Read
  .text.PINC_Write
-                0x00001394       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
-                0x00001394                PINC_Write
+                0x000013f0       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+                0x000013f0                PINC_Write
  .text.PINC_Read
-                0x000013ac       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
-                0x000013ac                PINC_Read
+                0x00001408       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+                0x00001408                PINC_Read
  .text.PIND_Write
-                0x000013bc       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
-                0x000013bc                PIND_Write
+                0x00001418       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+                0x00001418                PIND_Write
  .text.PIND_Read
-                0x000013d4        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
-                0x000013d4                PIND_Read
+                0x00001430        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+                0x00001430                PIND_Read
  .text.EEPROM_Enable
-                0x000013e0        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
-                0x000013e0                EEPROM_Enable
+                0x0000143c        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+                0x0000143c                EEPROM_Enable
  .text.EEPROM_Start
-                0x000013ec        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
-                0x000013ec                EEPROM_Start
+                0x00001448        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+                0x00001448                EEPROM_Start
  .text.EEPROM_WriteByte
-                0x000013f4       0xd0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
-                0x000013f4                EEPROM_WriteByte
+                0x00001450       0xd0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+                0x00001450                EEPROM_WriteByte
  .text.EEPROM_ReadByte
-                0x000014c4       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
-                0x000014c4                EEPROM_ReadByte
+                0x00001520       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+                0x00001520                EEPROM_ReadByte
  .text.ADC_CalcGain
-                0x000014ec       0x64 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x00001548       0x64 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
  .text.ADC_Enable
-                0x00001550       0x94 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x00001550                ADC_Enable
+                0x000015ac       0x94 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x000015ac                ADC_Enable
  .text.ADC_SetResolution
-                0x000015e4       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x000015e4                ADC_SetResolution
+                0x00001640       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x00001640                ADC_SetResolution
  .text.ADC_Init
-                0x0000161c       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x0000161c                ADC_Init
+                0x00001678       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x00001678                ADC_Init
  .text.ADC_Start
-                0x00001658       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x00001658                ADC_Start
+                0x000016b4       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x000016b4                ADC_Start
  .text.ADC_StartConvert
-                0x00001674       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x00001674                ADC_StartConvert
+                0x000016d0       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x000016d0                ADC_StartConvert
  .text.ADC_IsEndConversion
-                0x0000168c       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x0000168c                ADC_IsEndConversion
+                0x000016e8       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x000016e8                ADC_IsEndConversion
  .text.ADC_GetResult16
-                0x000016b0       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x000016b0                ADC_GetResult16
+                0x0000170c       0x18 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x0000170c                ADC_GetResult16
  .text.ADC_CountsTo_mVolts
-                0x000016c8       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x000016c8                ADC_CountsTo_mVolts
- .text.ADC_ISR  0x00001720        0x4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
-                0x00001720                ADC_ISR
+                0x00001724       0x58 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x00001724                ADC_CountsTo_mVolts
+ .text.ADC_ISR  0x0000177c        0x4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
+                0x0000177c                ADC_ISR
  .text.ADC_theACLK_SetModeRegister
-                0x00001724       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
-                0x00001724                ADC_theACLK_SetModeRegister
+                0x00001780       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
+                0x00001780                ADC_theACLK_SetModeRegister
  .text.PINMOV_ClearInterrupt
-                0x00001738       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
-                0x00001738                PINMOV_ClearInterrupt
+                0x00001794       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+                0x00001794                PINMOV_ClearInterrupt
  .text.ISR_MOV_SetVector
-                0x00001748        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
-                0x00001748                ISR_MOV_SetVector
+                0x000017a4        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+                0x000017a4                ISR_MOV_SetVector
  .text.ISR_MOV_SetPriority
-                0x00001754       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
-                0x00001754                ISR_MOV_SetPriority
+                0x000017b0       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+                0x000017b0                ISR_MOV_SetPriority
  .text.ISR_MOV_Enable
-                0x00001764        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
-                0x00001764                ISR_MOV_Enable
+                0x000017c0        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+                0x000017c0                ISR_MOV_Enable
  .text.ISR_MOV_Disable
-                0x00001770        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
-                0x00001770                ISR_MOV_Disable
+                0x000017cc        0xc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+                0x000017cc                ISR_MOV_Disable
  .text.ISR_MOV_StartEx
-                0x0000177c       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
-                0x0000177c                ISR_MOV_StartEx
- .text          0x00001798       0x20 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
-                0x00001798                CyDelayCycles
-                0x000017a8                CyEnterCriticalSection
-                0x000017b0                CyExitCriticalSection
+                0x000017d8       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+                0x000017d8                ISR_MOV_StartEx
+ *fill*         0x000017f4        0x4 
+ .text          0x000017f8       0x20 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
+                0x000017f8                CyDelayCycles
+                0x00001808                CyEnterCriticalSection
+                0x00001810                CyExitCriticalSection
  .text.CySetTempInt
-                0x000017b8       0x60 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x00001818       0x60 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
  .text.CyFlashGetSpcAlgorithm
-                0x00001818       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x00001818                CyFlashGetSpcAlgorithm
+                0x00001878       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x00001878                CyFlashGetSpcAlgorithm
  .text.CySetTemp
-                0x00001864       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x00001864                CySetTemp
+                0x000018c4       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x000018c4                CySetTemp
  .text.CyEEPROM_Start
-                0x00001878       0x54 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x00001878                CyEEPROM_Start
+                0x000018d8       0x54 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x000018d8                CyEEPROM_Start
  .text.CyEEPROM_ReadReserve
-                0x000018cc       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x000018cc                CyEEPROM_ReadReserve
+                0x0000192c       0x1c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x0000192c                CyEEPROM_ReadReserve
  .text.CyEEPROM_ReadRelease
-                0x000018e8       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x000018e8                CyEEPROM_ReadRelease
+                0x00001948       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x00001948                CyEEPROM_ReadRelease
  .text.CySpcStart
-                0x000018f8       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x000018f8                CySpcStart
+                0x00001958       0x24 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001958                CySpcStart
  .text.CySpcReadData
-                0x0000191c       0x34 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x0000191c                CySpcReadData
+                0x0000197c       0x34 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x0000197c                CySpcReadData
  .text.CySpcLoadMultiByte
-                0x00001950       0x78 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x00001950                CySpcLoadMultiByte
+                0x000019b0       0x78 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x000019b0                CySpcLoadMultiByte
  .text.CySpcWriteRow
-                0x000019c8       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x000019c8                CySpcWriteRow
+                0x00001a28       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001a28                CySpcWriteRow
  .text.CySpcGetTemp
-                0x00001a14       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x00001a14                CySpcGetTemp
+                0x00001a74       0x3c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001a74                CySpcGetTemp
  .text.CySpcLock
-                0x00001a50       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x00001a50                CySpcLock
+                0x00001ab0       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001ab0                CySpcLock
  .text.CySpcUnlock
-                0x00001a9c       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x00001a9c                CySpcUnlock
+                0x00001afc       0x38 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001afc                CySpcUnlock
  .text.CySpcGetAlgorithm
-                0x00001ad4       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x00001ad4                CySpcGetAlgorithm
- .text.__errno  0x00001afc        0xc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x00001afc                __errno
+                0x00001b34       0x28 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x00001b34                CySpcGetAlgorithm
+ .text.__errno  0x00001b5c        0xc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00001b5c                __errno
  .text.__libc_init_array
-                0x00001b08       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00001b08                __libc_init_array
- .text.memcpy   0x00001b54       0x16 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x00001b54                memcpy
- .text.memset   0x00001b6a       0x10 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x00001b6a                memset
- *fill*         0x00001b7a        0x2 
- .text.sprintf  0x00001b7c       0x48 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
-                0x00001b7c                siprintf
-                0x00001b7c                sprintf
+                0x00001b68       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00001b68                __libc_init_array
+ .text.memcpy   0x00001bb4       0x16 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00001bb4                memcpy
+ .text.memset   0x00001bca       0x10 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00001bca                memset
+ *fill*         0x00001bda        0x2 
+ .text.sprintf  0x00001bdc       0x48 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+                0x00001bdc                siprintf
+                0x00001bdc                sprintf
  .text.__ssputs_r
-                0x00001bc4       0xb2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x00001bc4                __ssputs_r
- *fill*         0x00001c76        0x2 
+                0x00001c24       0xb2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001c24                __ssputs_r
+ *fill*         0x00001cd6        0x2 
  .text._svfprintf_r
-                0x00001c78      0x1e8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x00001c78                _svfiprintf_r
-                0x00001c78                _svfprintf_r
+                0x00001cd8      0x1e8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001cd8                _svfiprintf_r
+                0x00001cd8                _svfprintf_r
  .text._printf_common
-                0x00001e60       0xec c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00001e60                _printf_common
+                0x00001ec0       0xec c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00001ec0                _printf_common
  .text._printf_i
-                0x00001f4c      0x24c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00001f4c                _printf_i
- .text.memchr   0x00002198       0x1c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
-                0x00002198                memchr
- .text.memmove  0x000021b4       0x36 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
-                0x000021b4                memmove
- *fill*         0x000021ea        0x2 
- .text._free_r  0x000021ec       0x98 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
-                0x000021ec                _free_r
+                0x00001fac      0x24c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00001fac                _printf_i
+ .text.memchr   0x000021f8       0x1c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x000021f8                memchr
+ .text.memmove  0x00002214       0x36 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+                0x00002214                memmove
+ *fill*         0x0000224a        0x2 
+ .text._free_r  0x0000224c       0x98 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+                0x0000224c                _free_r
  .text._malloc_r
-                0x00002284       0xbc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x00002284                _malloc_r
+                0x000022e4       0xbc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x000022e4                _malloc_r
  .text._realloc_r
-                0x00002340       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
-                0x00002340                _realloc_r
- .text._sbrk_r  0x0000238c       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
-                0x0000238c                _sbrk_r
+                0x000023a0       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x000023a0                _realloc_r
+ .text._sbrk_r  0x000023ec       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                0x000023ec                _sbrk_r
  .text.__malloc_lock
-                0x000023ac        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
-                0x000023ac                __malloc_lock
+                0x0000240c        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x0000240c                __malloc_lock
  .text.__malloc_unlock
-                0x000023ae        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
-                0x000023ae                __malloc_unlock
+                0x0000240e        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x0000240e                __malloc_unlock
  .text._malloc_usable_size_r
-                0x000023b0       0x14 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
-                0x000023b0                _malloc_usable_size_r
+                0x00002410       0x14 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x00002410                _malloc_usable_size_r
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x000023c4        0x0 linker stubs
+ .glue_7t       0x00002424        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x000023c4        0x0 linker stubs
+ .glue_7        0x00002424        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x000023c4        0x0 linker stubs
+ .vfp11_veneer  0x00002424        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x000023c4        0x0
- .v4_bx         0x000023c4        0x0 linker stubs
+.v4_bx          0x00002424        0x0
+ .v4_bx         0x00002424        0x0 linker stubs
 
-.iplt           0x000023c4        0x0
- .iplt          0x000023c4        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x00002424        0x0
+ .iplt          0x00002424        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x000023c4        0x4
+.eh_frame       0x00002424        0x4
  *(.eh_frame)
- .eh_frame      0x000023c4        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .eh_frame      0x000023c4        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .eh_frame      0x00002424        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x00002424        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000023c8                __exidx_end = .
+                0x00002428                __exidx_end = .
 
-.rodata         0x000023c8       0xf8
+.rodata         0x00002428      0x108
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x000023c8       0x58 .\CortexM3\ARM_GCC_541\Debug\main.o
- .rodata        0x00002420       0x30 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00002428       0x68 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .rodata        0x00002490       0x36 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .rodata.str1.1
-                0x00002450        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x000024c6        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .rodata.str1.1
-                0x00002452       0x11 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x000024c8       0x11 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
-                0x00002463       0x22 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00002488                . = ALIGN (0x4)
- *fill*         0x00002485        0x3 
+                0x000024d9       0x22 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000024fc                . = ALIGN (0x4)
+ *fill*         0x000024fb        0x1 
  *(.init)
- .init          0x00002488        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00002488                _init
- .init          0x0000248c        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x00002494                . = ALIGN (0x4)
-                0x00002494                __preinit_array_start = .
+ .init          0x000024fc        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000024fc                _init
+ .init          0x00002500        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00002508                . = ALIGN (0x4)
+                0x00002508                __preinit_array_start = .
  *(.preinit_array)
-                0x00002494                __preinit_array_end = .
-                0x00002494                . = ALIGN (0x4)
-                0x00002494                __init_array_start = .
+                0x00002508                __preinit_array_end = .
+                0x00002508                . = ALIGN (0x4)
+                0x00002508                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00002494        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .init_array    0x00002498        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x0000249c                __init_array_end = .
-                0x0000249c                . = ALIGN (0x4)
+ .init_array    0x00002508        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x0000250c        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00002510                __init_array_end = .
+                0x00002510                . = ALIGN (0x4)
  *(.fini)
- .fini          0x0000249c        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x0000249c                _fini
- .fini          0x000024a0        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x000024a8                . = ALIGN (0x4)
-                0x000024a8                __fini_array_start = .
+ .fini          0x00002510        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x00002510                _fini
+ .fini          0x00002514        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x0000251c                . = ALIGN (0x4)
+                0x0000251c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000024a8        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .fini_array    0x0000251c        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000024ac                __fini_array_end = .
-                0x000024ac                . = ALIGN (0x4)
+                0x00002520                __fini_array_end = .
+                0x00002520                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000024ac                . = ALIGN (0x4)
+                0x00002520                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000024ac                . = ALIGN (0x4)
-                0x000024ac                __cy_regions = .
-                0x000024ac        0x4 LONG 0x24c0 __cy_region_init_ram
-                0x000024b0        0x4 LONG 0x1fff80c8 __cy_region_start_data
-                0x000024b4        0x4 LONG 0x80 __cy_region_init_size_ram
-                0x000024b8        0x4 LONG 0x80 __cy_region_zero_size_ram
-                0x000024bc                __cy_regions_end = .
-                0x000024c0                . = ALIGN (0x8)
- *fill*         0x000024bc        0x4 
-                0x000024c0                _etext = .
+                0x00002520                . = ALIGN (0x4)
+                0x00002520                __cy_regions = .
+                0x00002520        0x4 LONG 0x2530 __cy_region_init_ram
+                0x00002524        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x00002528        0x4 LONG 0x80 __cy_region_init_size_ram
+                0x0000252c        0x4 LONG 0x88 __cy_region_zero_size_ram
+                0x00002530                __cy_regions_end = .
+                0x00002530                . = ALIGN (0x8)
+                0x00002530                _etext = .
 
 .cy_checksum_exclude
-                0x000024c0        0x0
+                0x00002530        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000       0xc0
@@ -1288,7 +1288,7 @@ END GROUP
  .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
                 0x1fff80c0                CyResetStatus
 
-.data           0x1fff80c8       0x80 load address 0x000024c0
+.data           0x1fff80c8       0x80 load address 0x00002530
                 0x1fff80c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff80c8        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
@@ -1313,15 +1313,15 @@ END GROUP
  *(.ram)
                 0x1fff8148                _edata = .
 
-.igot.plt       0x1fff8148        0x0 load address 0x00002540
+.igot.plt       0x1fff8148        0x0 load address 0x000025b0
  .igot.plt      0x1fff8148        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.bss            0x1fff8148       0x80 load address 0x00002540
+.bss            0x1fff8148       0x88 load address 0x000025b0
                 0x1fff8148                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x1fff8148       0x1c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .bss           0x1fff8164        0xc .\CortexM3\ARM_GCC_541\Debug\main.o
+ .bss           0x1fff8164       0x10 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x1fff8164                bandera
                 0x1fff8165                banderaS
                 0x1fff8166                banderaH
@@ -1329,70 +1329,72 @@ END GROUP
                 0x1fff8168                banderaF
                 0x1fff8169                banderaM
                 0x1fff816a                cont
-                0x1fff816c                aux
- .bss           0x1fff8170        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
-                0x1fff8170                UART_initVar
- .bss           0x1fff8172        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
-                0x1fff8172                LCD_enableState
-                0x1fff8173                LCD_initVar
- .bss           0x1fff8174        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
-                0x1fff8174                I2C_initVar
- .bss           0x1fff8175        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
-                0x1fff8175                PWM_initVar
- .bss           0x1fff8176        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x1fff8176                ADC_initVar
- *fill*         0x1fff8177        0x1 
- .bss           0x1fff8178        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
-                0x1fff8178                SpcLockState
+                0x1fff816c                temp2
+                0x1fff8170                aux
+ .bss           0x1fff8174        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+                0x1fff8174                UART_initVar
+ .bss           0x1fff8176        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+                0x1fff8176                LCD_enableState
+                0x1fff8177                LCD_initVar
+ .bss           0x1fff8178        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+                0x1fff8178                I2C_initVar
+ .bss           0x1fff8179        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+                0x1fff8179                PWM_initVar
+ .bss           0x1fff817a        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x1fff817a                ADC_initVar
+ *fill*         0x1fff817b        0x1 
+ .bss           0x1fff817c        0x8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+                0x1fff817c                SpcLockState
  .bss.__malloc_sbrk_start
-                0x1fff8180        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x1fff8180                __malloc_sbrk_start
- .bss.__malloc_free_list
                 0x1fff8184        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x1fff8184                __malloc_free_list
+                0x1fff8184                __malloc_sbrk_start
+ .bss.__malloc_free_list
+                0x1fff8188        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x1fff8188                __malloc_free_list
  *(COMMON)
- COMMON         0x1fff8188       0x18 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x1fff8188                ds
-                0x1fff8190                wHoraFin
-                0x1fff8198                wHoraInicio
- COMMON         0x1fff81a0        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
-                0x1fff81a0                I2C_state
- *fill*         0x1fff81a1        0x3 
- COMMON         0x1fff81a4       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
-                0x1fff81a4                I2C_mstrWrBufIndex
-                0x1fff81a5                I2C_mstrWrBufSize
-                0x1fff81a6                I2C_mstrStatus
-                0x1fff81a8                I2C_mstrRdBufPtr
-                0x1fff81ac                I2C_mstrControl
-                0x1fff81ad                I2C_mstrRdBufSize
-                0x1fff81ae                I2C_mstrRdBufIndex
-                0x1fff81b0                I2C_mstrWrBufPtr
- COMMON         0x1fff81b4        0xa .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
-                0x1fff81b4                ADC_countsPer10Volt
-                0x1fff81b8                ADC_shift
-                0x1fff81ba                ADC_countsPerVolt
-                0x1fff81bc                ADC_offset
- *fill*         0x1fff81be        0x2 
- COMMON         0x1fff81c0        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
-                0x1fff81c0                dieTemperature
+ COMMON         0x1fff818c       0x18 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff818c                ds
+                0x1fff8194                wHoraFin
+                0x1fff819c                wHoraInicio
+ COMMON         0x1fff81a4        0x1 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+                0x1fff81a4                I2C_state
+ *fill*         0x1fff81a5        0x3 
+ COMMON         0x1fff81a8       0x10 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+                0x1fff81a8                I2C_mstrWrBufIndex
+                0x1fff81a9                I2C_mstrWrBufSize
+                0x1fff81aa                I2C_mstrStatus
+                0x1fff81ac                I2C_mstrRdBufPtr
+                0x1fff81b0                I2C_mstrControl
+                0x1fff81b1                I2C_mstrRdBufSize
+                0x1fff81b2                I2C_mstrRdBufIndex
+                0x1fff81b4                I2C_mstrWrBufPtr
+ COMMON         0x1fff81b8        0xa .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+                0x1fff81b8                ADC_countsPer10Volt
+                0x1fff81bc                ADC_shift
+                0x1fff81be                ADC_countsPerVolt
+                0x1fff81c0                ADC_offset
  *fill*         0x1fff81c2        0x2 
- COMMON         0x1fff81c4        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
-                0x1fff81c4                errno
-                0x1fff81c8                . = ALIGN (0x8)
+ COMMON         0x1fff81c4        0x2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+                0x1fff81c4                dieTemperature
+ *fill*         0x1fff81c6        0x2 
+ COMMON         0x1fff81c8        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+                0x1fff81c8                errno
+                0x1fff81d0                . = ALIGN (0x8)
+ *fill*         0x1fff81cc        0x4 
  *(.ram.b)
-                0x1fff81c8                _end = .
-                0x1fff81c8                __end = .
-                0x1fff81c8                PROVIDE (end, .)
-                0x1fff81c8                PROVIDE (__bss_end__, .)
-                0x000024c0                __cy_region_init_ram = LOADADDR (.data)
+                0x1fff81d0                _end = .
+                0x1fff81d0                __end = .
+                0x1fff81d0                PROVIDE (end, .)
+                0x1fff81d0                PROVIDE (__bss_end__, .)
+                0x00002530                __cy_region_init_ram = LOADADDR (.data)
                 0x00000080                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000080                __cy_region_zero_size_ram = (_end - _edata)
+                0x00000088                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff81c8       0x80 load address 0x00002540
-                0x1fff81c8                . = _end
-                0x1fff8248                . = (. + 0x80)
- *fill*         0x1fff81c8       0x80 
-                0x1fff8248                __cy_heap_limit = .
+.heap           0x1fff81d0       0x80 load address 0x000025b0
+                0x1fff81d0                . = _end
+                0x1fff8250                . = (. + 0x80)
+ *fill*         0x1fff81d0       0x80 
+                0x1fff8250                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -1408,9 +1410,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0x4b0
+.cyconfigecc    0x80000000      0x580
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0x4b0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x580 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -1439,8 +1441,8 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00002540        0x0 load address 0x9050000c
- .rel.iplt      0x00002540        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x000025b0        0x0 load address 0x9050000c
+ .rel.iplt      0x000025b0        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -1522,38 +1524,38 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x77f0
+.debug_info     0x00000000     0x7834
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xb80 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_info    0x00000b80      0x572 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x000010f2      0x136 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00001228      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x000015e3      0x60c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
- .debug_info    0x00001bef      0x715 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
- .debug_info    0x00002304      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
- .debug_info    0x000025d6      0x2ad .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
- .debug_info    0x00002883      0x184 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
- .debug_info    0x00002a07      0x207 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
- .debug_info    0x00002c0e      0x407 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
- .debug_info    0x00003015      0x283 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
- .debug_info    0x00003298     0x1374 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
- .debug_info    0x0000460c      0xa2a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
- .debug_info    0x00005036      0x381 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
- .debug_info    0x000053b7      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
- .debug_info    0x000054d6      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
- .debug_info    0x000055f5      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
- .debug_info    0x00005714      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
- .debug_info    0x00005833      0x630 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
- .debug_info    0x00005e63      0x5c0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
- .debug_info    0x00006423       0x92 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
- .debug_info    0x000064b5      0x2c4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
- .debug_info    0x00006779      0x172 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
- .debug_info    0x000068eb      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
- .debug_info    0x00006bbd       0x96 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
- .debug_info    0x00006c53      0x64d .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
- .debug_info    0x000072a0      0x550 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_info    0x00000000      0xbe7 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x00000be7      0x54d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00001134      0x136 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x0000126a      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x00001625      0x60c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+ .debug_info    0x00001c31      0x715 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+ .debug_info    0x00002346      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+ .debug_info    0x00002618      0x2ad .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+ .debug_info    0x000028c5      0x184 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
+ .debug_info    0x00002a49      0x207 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
+ .debug_info    0x00002c50      0x407 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+ .debug_info    0x00003057      0x283 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
+ .debug_info    0x000032da     0x1374 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+ .debug_info    0x0000464e      0xa2a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
+ .debug_info    0x00005078      0x381 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+ .debug_info    0x000053f9      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+ .debug_info    0x00005518      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+ .debug_info    0x00005637      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+ .debug_info    0x00005756      0x11f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+ .debug_info    0x00005875      0x630 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+ .debug_info    0x00005ea5      0x5c0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+ .debug_info    0x00006465       0x92 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
+ .debug_info    0x000064f7      0x2c4 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
+ .debug_info    0x000067bb      0x174 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_info    0x0000692f      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_info    0x00006c01       0x96 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
+ .debug_info    0x00006c97      0x64d .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_info    0x000072e4      0x550 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x20a4
+.debug_abbrev   0x00000000     0x2095
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x1a5 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_abbrev  0x000001a5      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -1578,149 +1580,149 @@ END GROUP
  .debug_abbrev  0x00001834      0x1ac .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
  .debug_abbrev  0x000019e0       0x42 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
  .debug_abbrev  0x00001a22      0x121 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
- .debug_abbrev  0x00001b43       0x9f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
- .debug_abbrev  0x00001be2      0x173 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
- .debug_abbrev  0x00001d55       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00001d69      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
- .debug_abbrev  0x00001f10      0x194 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_abbrev  0x00001b43       0x90 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_abbrev  0x00001bd3      0x173 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_abbrev  0x00001d46       0x14 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001d5a      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_abbrev  0x00001f01      0x194 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
 
-.debug_line     0x00000000     0x31b1
+.debug_line     0x00000000     0x31b8
  *(.debug_line)
- .debug_line    0x00000000      0x3cb .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_line    0x000003cb      0x1ec .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x000005b7      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x000006f8      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x0000092c      0x2bc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
- .debug_line    0x00000be8      0x1dc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
- .debug_line    0x00000dc4      0x132 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
- .debug_line    0x00000ef6       0xd9 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
- .debug_line    0x00000fcf      0x114 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
- .debug_line    0x000010e3       0xbb .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
- .debug_line    0x0000119e      0x1fd .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
- .debug_line    0x0000139b      0x17c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
- .debug_line    0x00001517      0x816 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
- .debug_line    0x00001d2d      0x367 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
- .debug_line    0x00002094      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
- .debug_line    0x0000223b       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
- .debug_line    0x000022cc       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
- .debug_line    0x0000235d       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
- .debug_line    0x000023ee       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
- .debug_line    0x0000247f      0x264 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
- .debug_line    0x000026e3      0x216 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
- .debug_line    0x000028f9       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
- .debug_line    0x00002949      0x19d .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
- .debug_line    0x00002ae6       0xb7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
- .debug_line    0x00002b9d      0x134 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
- .debug_line    0x00002cd1       0x66 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
- .debug_line    0x00002d37      0x21a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
- .debug_line    0x00002f51      0x260 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_line    0x00000000      0x3d3 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x000003d3      0x1eb .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x000005be      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x000006ff      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x00000933      0x2bc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+ .debug_line    0x00000bef      0x1dc .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+ .debug_line    0x00000dcb      0x132 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+ .debug_line    0x00000efd       0xd9 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+ .debug_line    0x00000fd6      0x114 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
+ .debug_line    0x000010ea       0xbb .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
+ .debug_line    0x000011a5      0x1fd .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+ .debug_line    0x000013a2      0x17c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
+ .debug_line    0x0000151e      0x816 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+ .debug_line    0x00001d34      0x367 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
+ .debug_line    0x0000209b      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+ .debug_line    0x00002242       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+ .debug_line    0x000022d3       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+ .debug_line    0x00002364       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+ .debug_line    0x000023f5       0x91 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+ .debug_line    0x00002486      0x264 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+ .debug_line    0x000026ea      0x216 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+ .debug_line    0x00002900       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
+ .debug_line    0x00002950      0x19d .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
+ .debug_line    0x00002aed       0xb7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_line    0x00002ba4      0x134 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_line    0x00002cd8       0x66 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyBootAsmGnu.o)
+ .debug_line    0x00002d3e      0x21a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_line    0x00002f58      0x260 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
 
-.debug_frame    0x00000000     0x2450
+.debug_frame    0x00000000     0x2454
  *(.debug_frame)
- .debug_frame   0x00000000      0x118 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_frame   0x00000118       0xfc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_frame   0x00000214       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_frame   0x000002cc      0x250 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
- .debug_frame   0x0000051c      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
- .debug_frame   0x00000704      0x104 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
- .debug_frame   0x00000808       0x94 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
- .debug_frame   0x0000089c       0x30 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
- .debug_frame   0x000008cc       0x74 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
- .debug_frame   0x00000940      0x138 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
- .debug_frame   0x00000a78       0xe0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
- .debug_frame   0x00000b58      0x738 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
- .debug_frame   0x00001290      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
- .debug_frame   0x00001488      0x154 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
- .debug_frame   0x000015dc       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
- .debug_frame   0x0000162c       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
- .debug_frame   0x0000167c       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
- .debug_frame   0x000016cc       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
- .debug_frame   0x0000171c      0x17c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
- .debug_frame   0x00001898      0x1b0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
- .debug_frame   0x00001a48       0x20 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
- .debug_frame   0x00001a68      0x100 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
- .debug_frame   0x00001b68       0x70 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
- .debug_frame   0x00001bd8      0x104 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
- .debug_frame   0x00001cdc      0x194 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
- .debug_frame   0x00001e70      0x180 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
- .debug_frame   0x00001ff0       0x44 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x00002034       0x38 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000206c       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x0000208c       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x000020b4       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x000020e0       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00002108       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00002128       0x70 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
- .debug_frame   0x00002198       0x90 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00002228       0x60 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00002288       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x000022b0       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x000022d8       0x38 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00002310       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000233c       0x3c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00002378       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x000023a4       0x30 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x000023d4       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x000023f4       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000      0x11c .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x0000011c       0xfc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x00000218       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x000002d0      0x250 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+ .debug_frame   0x00000520      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+ .debug_frame   0x00000708      0x104 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+ .debug_frame   0x0000080c       0x94 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+ .debug_frame   0x000008a0       0x30 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
+ .debug_frame   0x000008d0       0x74 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
+ .debug_frame   0x00000944      0x138 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+ .debug_frame   0x00000a7c       0xe0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
+ .debug_frame   0x00000b5c      0x738 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+ .debug_frame   0x00001294      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
+ .debug_frame   0x0000148c      0x154 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+ .debug_frame   0x000015e0       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+ .debug_frame   0x00001630       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+ .debug_frame   0x00001680       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+ .debug_frame   0x000016d0       0x50 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+ .debug_frame   0x00001720      0x17c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+ .debug_frame   0x0000189c      0x1b0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+ .debug_frame   0x00001a4c       0x20 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
+ .debug_frame   0x00001a6c      0x100 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
+ .debug_frame   0x00001b6c       0x70 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_frame   0x00001bdc      0x104 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_frame   0x00001ce0      0x194 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_frame   0x00001e74      0x180 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_frame   0x00001ff4       0x44 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x00002038       0x38 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002070       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00002090       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000020b8       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000020e4       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000210c       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000212c       0x70 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000219c       0x90 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000222c       0x60 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000228c       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x000022b4       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000022dc       0x38 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00002314       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00002340       0x3c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000237c       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000023a8       0x30 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x000023d8       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000023f8       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
 
-.debug_str      0x00000000     0x2603
+.debug_str      0x00000000     0x2609
  *(.debug_str)
- .debug_str     0x00000000      0x478 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x4d5 (size before relaxing)
- .debug_str     0x00000478      0x17d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0x47e .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x4db (size before relaxing)
+ .debug_str     0x0000047e      0x17d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x31f (size before relaxing)
- .debug_str     0x000005f5       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x000005fb       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x1ea (size before relaxing)
- .debug_str     0x0000066a      0x13f .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x00000670      0x13f .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x310 (size before relaxing)
- .debug_str     0x000007a9      0x2ad .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
+ .debug_str     0x000007af      0x2ad .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART.o)
                                 0x47b (size before relaxing)
- .debug_str     0x00000a56      0x118 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
+ .debug_str     0x00000a5c      0x118 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(LCD.o)
                                 0x331 (size before relaxing)
- .debug_str     0x00000b6e       0xf0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
+ .debug_str     0x00000b74       0xf0 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(IRQRX.o)
                                 0x2ac (size before relaxing)
- .debug_str     0x00000c5e       0xf6 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
+ .debug_str     0x00000c64       0xf6 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C.o)
                                 0x2e7 (size before relaxing)
- .debug_str     0x00000d54       0x86 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
+ .debug_str     0x00000d5a       0x86 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_INT.o)
                                 0x265 (size before relaxing)
- .debug_str     0x00000dda       0x56 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
+ .debug_str     0x00000de0       0x56 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_PM.o)
                                 0x283 (size before relaxing)
- .debug_str     0x00000e30      0x111 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
+ .debug_str     0x00000e36      0x111 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(I2C_MASTER.o)
                                 0x3aa (size before relaxing)
- .debug_str     0x00000f41      0x183 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
+ .debug_str     0x00000f47      0x183 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(UART_IntClock.o)
                                 0x33c (size before relaxing)
- .debug_str     0x000010c4      0x7ab .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
+ .debug_str     0x000010ca      0x7ab .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyLib.o)
                                 0xa4d (size before relaxing)
- .debug_str     0x0000186f      0x365 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
+ .debug_str     0x00001875      0x365 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(cyPm.o)
                                 0x739 (size before relaxing)
- .debug_str     0x00001bd4      0x167 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
+ .debug_str     0x00001bda      0x167 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PWM.o)
                                 0x356 (size before relaxing)
- .debug_str     0x00001d3b       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
+ .debug_str     0x00001d41       0x4c .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINA.o)
                                 0x1e3 (size before relaxing)
- .debug_str     0x00001d87       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
+ .debug_str     0x00001d8d       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINB.o)
                                 0x1e3 (size before relaxing)
- .debug_str     0x00001dc8       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
+ .debug_str     0x00001dce       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINC.o)
                                 0x1e3 (size before relaxing)
- .debug_str     0x00001e09       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
+ .debug_str     0x00001e0f       0x41 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PIND.o)
                                 0x1e3 (size before relaxing)
- .debug_str     0x00001e4a      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
+ .debug_str     0x00001e50      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
                                 0x3c8 (size before relaxing)
- .debug_str     0x00001ff1      0x180 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
+ .debug_str     0x00001ff7      0x180 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
                                 0x42d (size before relaxing)
- .debug_str     0x00002171       0x29 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
+ .debug_str     0x00002177       0x29 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_INT.o)
                                 0x195 (size before relaxing)
- .debug_str     0x0000219a      0x16e .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
+ .debug_str     0x000021a0      0x16e .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
                                 0x367 (size before relaxing)
- .debug_str     0x00002308       0x81 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_str     0x0000230e       0x81 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
                                 0x22b (size before relaxing)
- .debug_str     0x00002389       0xf2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_str     0x0000238f       0xf2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
                                 0x2c8 (size before relaxing)
- .debug_str     0x0000247b      0x11a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_str     0x00002481      0x11a .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
                                 0x3c6 (size before relaxing)
- .debug_str     0x00002595       0x6e .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_str     0x0000259b       0x6e .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
                                 0x33e (size before relaxing)
 
-.debug_loc      0x00000000     0x32c9
+.debug_loc      0x00000000     0x32ea
  *(.debug_loc)
  .debug_loc     0x00000000      0x130 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_loc     0x00000130      0x1fd .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -1743,10 +1745,10 @@ END GROUP
  .debug_loc     0x00001ed8      0x49f .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(EEPROM.o)
  .debug_loc     0x00002377      0x295 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC.o)
  .debug_loc     0x0000260c      0x14d .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ADC_theACLK.o)
- .debug_loc     0x00002759       0x63 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
- .debug_loc     0x000027bc       0x56 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
- .debug_loc     0x00002812      0x3b2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
- .debug_loc     0x00002bc4      0x705 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
+ .debug_loc     0x00002759       0x84 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(PINMOV.o)
+ .debug_loc     0x000027dd       0x56 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(ISR_MOV.o)
+ .debug_loc     0x00002833      0x3b2 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CyFlash.o)
+ .debug_loc     0x00002be5      0x705 .\CortexM3\ARM_GCC_541\Debug\Domoticaconblink.a(CySpc.o)
 
 .debug_macinfo
  *(.debug_macinfo)

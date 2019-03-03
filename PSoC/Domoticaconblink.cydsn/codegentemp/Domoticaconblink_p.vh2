@@ -1,5 +1,5 @@
 -- Project:   Domoticaconblink
--- Generated: 03/02/2019 19:43:20
+-- Generated: 03/02/2019 20:00:12
 -- PSoC Creator  4.2
 
 ENTITY Domoticaconblink IS
@@ -205,6 +205,8 @@ ARCHITECTURE __DEFAULT__ OF Domoticaconblink IS
     ATTRIBUTE Location OF PIND(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF PTEMP(0) : LABEL IS "iocell18";
     ATTRIBUTE Location OF PTEMP(0) : LABEL IS "P2[4]";
+    ATTRIBUTE lib_model OF PINMOV(0) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF PINMOV(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF Net_2 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \UART:BUART:counter_load_not\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_0\ : LABEL IS "macrocell3";

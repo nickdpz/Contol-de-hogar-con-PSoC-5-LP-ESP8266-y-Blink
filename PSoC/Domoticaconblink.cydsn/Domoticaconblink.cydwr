@@ -257,6 +257,7 @@
       <Data key="63aa242a-336b-4bda-9122-4de383003084" value="SCL" />
       <Data key="264be2d3-9481-494b-8d9c-c1905a45e9cc" value="SDA" />
       <Data key="278d1f3a-7608-4ef5-833d-d6929b0a700e" value="PINB" />
+      <Data key="906e984c-6275-40c3-8e0c-1b9fb2e56630" value="PINMOV" />
       <Data key="2740f4ae-b3a8-427a-b55d-0614e1735220" value="PINC" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="Rx_1" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="PTEMP" />
@@ -3392,6 +3393,11 @@
     <Group key="278d1f3a-7608-4ef5-833d-d6929b0a700e">
       <Group key="0">
         <Data key="Port Format" value="1,5" />
+      </Group>
+    </Group>
+    <Group key="906e984c-6275-40c3-8e0c-1b9fb2e56630">
+      <Group key="0">
+        <Data key="Port Format" value="2,5" />
       </Group>
     </Group>
     <Group key="2740f4ae-b3a8-427a-b55d-0614e1735220">

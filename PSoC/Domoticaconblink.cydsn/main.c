@@ -20,7 +20,7 @@ volatile bool banderaF = false;
 volatile bool banderaS = false;
 volatile bool banderaH = false;
 volatile bool cont=false;
-
+volatile uint16 temp2=0;
 typedef union
 {struct{
   uint8_t sec;
@@ -221,32 +221,32 @@ void muestreo(){
     temp=ADC_GetResult16();
     aux[1]=ADC_CountsTo_mVolts(temp);
     if((2500>aux[0])&&(aux[1]>=2500)){//Nueva medida es mayor a 2500 y la anterior era menor 2500 ->50°
-        temp=EEPROM_ReadByte(0);
-        temp++;//Aumenta el numero de alertas
-        EEPROM_WriteByte(temp,0);
+        temp2++;//Aumenta el numero de alertas
         LCD_Position(0,0);
         LCD_PrintString("Warning T #");
-        LCD_PrintNumber(temp);
-        sprintf(warning,"t%d",temp);
+        LCD_PrintNumber(temp2);
+        sprintf(warning,"t%d",temp2);
         UART_PutString(warning);        
+    }
+    temp=EEPROM_ReadByte(0);//Actualiza aca ya que en la interupcion no se puede
+    if(temp2!=temp){
+        if(temp2>temp){
+            EEPROM_WriteByte(temp2,0);
+        }else{
+            temp2=temp;
+        }    
     }
     
 }
 
 
 CY_ISR(InterrupISR){
-        
-        PINA_Write(1);
-//        char temp=0;
-//        char warning[3]={};
-//        temp=EEPROM_ReadByte(0);
-//        temp++;//Aumenta el numero de alertas
-//        EEPROM_WriteByte(temp,0);
-//        LCD_Position(0,0);
-//        LCD_PrintString("Warning M #");
-//        LCD_PrintNumber(temp);
-//        sprintf(warning,"m%d",temp);
-//        UART_PutString(warning); 
+        char warning[3]={};
+        temp2++;//Aumenta el numero de alertas
+        LCD_Position(0,0);
+        LCD_PrintString("Warning M #");
+        LCD_PrintNumber(temp2);
+        sprintf(warning,"m%d",temp2);
         PINMOV_ClearInterrupt();
 }
 
@@ -277,7 +277,7 @@ int main(void)
     PWM_WriteCompare1(0);
     PWM_WriteCompare2(0); 
     EEPROM_Start();
-    //EEPROM_WriteByte(0,0);
+    EEPROM_WriteByte(0,0);
     
     for(;;)
     {       
