@@ -9,16 +9,22 @@
 #define BLYNK_MAX_SENDBYTES 256 //alargar el maxiomo del mensaje
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-  char auth[] = "bc5aa1f8e8954a4992fbce283d802d15";//nicolas
-//char auth[] = "cbde13b152d3432da53ad5585f9eb550";//jefer
+//  char auth[] = "bc5aa1f8e8954a4992fbce283d802d15";//nicolas
+  char auth[] = "cbde13b152d3432da53ad5585f9eb550";//jefer
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "JAPEREZ";
-char pass[] = "26071967";
+//char ssid[] = "JAPEREZ";
+//char pass[] = "26071967";
+char ssid[] = "jefer";
+char pass[] = "holiwi1234";
 int alert=0;
 char tweets[256];
 char dato[12];
+
+bool banderat=false;
+bool banderam=false;
+
 BLYNK_WRITE(V0) // V5 is the number of Virtual Pin  Boton 1
 {
   Serial.print("w");
@@ -96,6 +102,7 @@ void setup()
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
   Serial.print("*");
+  
   //BLYNK_CONNECTED();
 }
 
@@ -105,20 +112,37 @@ void loop()
   if(Serial.available()>0)
   {
     char in_serial=Serial.read();
+
+    if(banderat){
+      sprintf(tweets,"Alerta N%d de Temperatura",in_serial);
+      Blynk.tweet(tweets);
+      banderat=false;
+      
+    }
+     if(banderam){
+      sprintf(tweets,"Alerta N%d de Movimiento",in_serial);
+      Blynk.tweet(tweets);
+      banderam=false;
+     }
     if (in_serial=='t')
     {
-      alert=Serial.read();
-      sprintf(tweets,"Alerta N%d de Temperatura",alert);
-      Blynk.tweet(tweets);
+      banderat=true;
+    }else if(in_serial=='m'){
+        banderam=true;
+      
+    }else if(in_serial=='w'){
+                 Blynk.virtualWrite(0,Serial.read());
     }
-    if(in_serial=='m'){
-      
-            alert=Serial.read();
-            sprintf(tweets,"Alerta N %d de Movimiento",alert);
-            Blynk.tweet(tweets);
-      
-      }
-    
+     else if(in_serial=='x'){
+        
+            Blynk.virtualWrite(1,Serial.read());
+     }
+     else if(in_serial=='y'){
+        Blynk.virtualWrite(2,Serial.read());
+        }
+     else if(in_serial=='z'){
+        Blynk.virtualWrite(3,Serial.read());
+        }    
   }
   
 }

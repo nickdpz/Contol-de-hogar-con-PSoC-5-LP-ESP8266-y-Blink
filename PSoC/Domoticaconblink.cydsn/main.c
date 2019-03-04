@@ -419,19 +419,21 @@ void reloj(){
 void muestreo(){
     //Temperatura
     uint16 temp=0;
-    char warning[3]={};
     aux[0]=aux[1];//Actualiza dato pasado
     ADC_StartConvert();
     ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
     temp=ADC_GetResult16();
     aux[1]=ADC_CountsTo_mVolts(temp);
     if((2500>aux[0])&&(aux[1]>=2500)){//Nueva medida es mayor a 2500 y la anterior era menor 2500 ->50°
+        char t[1];
         temp2=temp2+1;//Aumenta el numero de alertas
         LCD_Position(0,0);
         LCD_PrintString("Warning T #");
         LCD_PrintNumber(temp2);
-        sprintf(warning,"t%d",temp2);
-        UART_PutString(warning);        
+        UART_PutString("t");
+        t[0]=(0xFF&temp2);
+        UART_PutString(t);
+        
     }
     temp=EEPROM_ReadByte(0);//Actualiza aca ya que en la interupcion no se puede
     if(temp2!=temp){
@@ -445,58 +447,84 @@ void muestreo(){
 }
 
 void comparacion(){
+    char a[3]={};
     if(item1[0]||item1[1]){
 //        LCD_Position(0,0);
 //        LCD_PrintString("Puede imprimir");
         if((wHoraInicio[2]==((ds.hour)&(0b00111111)))&(wHoraInicio[1]==ds.min)&(ds.sec==0x0)){
             PINA_Write(1);
+            sprintf(a,"w%d",1);
+            UART_PutString(a);   
         }
     }
     if(item1[2]||item1[3]){
         if((wHoraFin[2]==((ds.hour)&(0b00111111)))&(wHoraFin[1]==ds.min)&(ds.sec==0x0)){
             PINA_Write(0);
+            
+            sprintf(a,"w%d",0);
+            UART_PutString(a);   
         }
     }
     if(item2[0]||item2[1]){
         if((xHoraInicio[2]==((ds.hour)&(0b00111111)))&(xHoraInicio[1]==ds.min)&(ds.sec==0x0)){
             PINB_Write(1);
+            
+            sprintf(a,"x%d",1);
+            UART_PutString(a);   
         }
     }
     if(item2[2]||item2[3]){
         if((xHoraFin[2]==((ds.hour)&(0b00111111)))&(xHoraFin[1]==ds.min)&(ds.sec==0x0)){
             PINB_Write(0);
+            
+            sprintf(a,"x%d",0);
+            UART_PutString(a);   
         }
     }
     if(item3[0]||item3[1]){
         if((yHoraInicio[2]==((ds.hour)&(0b00111111)))&(yHoraInicio[1]==ds.min)&(ds.sec==0x0)){
             PINC_Write(1);
+            
+            sprintf(a,"y%d",1);
+            UART_PutString(a);   
         }
     }
     if(item3[2]||item3[3]){
         if((yHoraFin[2]==((ds.hour)&(0b00111111)))&(yHoraFin[1]==ds.min)&(ds.sec==0x0)){
         PINC_Write(0);
+        
+            sprintf(a,"y%d",0);
+            UART_PutString(a);   
         }
     }
     if(item4[0]||item4[1]){
         if((zHoraInicio[2]==((ds.hour)&(0b00111111)))&(zHoraInicio[1]==ds.min)&(ds.sec==0x0)){
         PIND_Write(1);
+        
+            sprintf(a,"z%d",1);
+            UART_PutString(a);   
         }
     }
     if(item4[2]||item4[3]){        
         if((zHoraFin[2]==((ds.hour)&(0b00111111)))&(zHoraFin[1]==ds.min)&(ds.sec==0x0)){
         PIND_Write(0);
+        
+            sprintf(a,"z%d",0);
+            UART_PutString(a);   
         }
     }
 
 }
 
 CY_ISR(InterrupISR){
-        char warning[3]={};
+    char m[1];
         temp2=temp2+1;//Aumenta el numero de alertas
         LCD_Position(0,0);
         LCD_PrintString("Warning M #");
         LCD_PrintNumber(temp2);
-        sprintf(warning,"m%d",temp2);
+        UART_PutString("m");
+        m[0]=(0xFF&temp2);
+        UART_PutString(m);
         PINMOV_ClearInterrupt();
 }
 
